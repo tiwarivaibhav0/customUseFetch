@@ -1,16 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { useEffect } from "react";
 import useFetch from "./customHooks/fetchHook";
 
 function App() {
   const { data, extractDataFromApi } = useFetch();
   const changefetchUrl = (url) => {
     extractDataFromApi(
-      "https://jsonplaceholder.typicode.com/todos/",
-      { key1: "val1", key2: "val2" },
-
-      "POST"
+      "https://jsonplaceholder.typicode.com/todos/","",
+      "GET"
     );
   };
 
